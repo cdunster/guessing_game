@@ -9,8 +9,6 @@ fn main() {
 
     let answer = rand::thread_rng().gen_range(1, 101);
 
-    println!("answer is: {}", answer);
-
     loop {
         println!("Please enter your guess.");
 
