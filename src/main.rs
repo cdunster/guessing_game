@@ -18,7 +18,10 @@ fn main() {
 
         io::stdin().read_line(&mut guess).expect("Invalid entry.");
 
-        let guess: u8 = guess.trim().parse().expect("Please enter a number.");
+        let guess: u8 = match guess.trim().parse() {
+            Ok(number) => number,
+            Err(_) => continue,
+        };
 
         println!("You guessed: {}", guess);
 
